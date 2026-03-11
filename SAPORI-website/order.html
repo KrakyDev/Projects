@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order — Sapori Restaurant</title>
+  <meta name="description" content="Place your order at Sapori. Review your cart and fill in delivery details.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">Sapori<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="order.html">Order</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" aria-label="Open cart">
+        🛒 <span class="cart-count">0</span>
+      </button>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── MOBILE MENU ─── -->
+<nav class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="order.html">Order Now</a>
+</nav>
+
+<!-- ─── CART DRAWER ─── -->
+<div class="cart-overlay"></div>
+<div class="cart-drawer">
+  <div class="drawer-header">
+    <h3>Your Cart</h3>
+    <button class="close-drawer">✕</button>
+  </div>
+  <div class="drawer-items"></div>
+  <div class="drawer-footer">
+    <div class="drawer-total"><span>Total</span><span>$0.00</span></div>
+    <a href="order.html" id="drawer-checkout-btn" class="btn btn-primary" style="width:100%;justify-content:center;">
+      Proceed to Checkout
+    </a>
+  </div>
+</div>
+
+<!-- ─── TOAST ─── -->
+<div class="toast">
+  <span class="toast-icon">✓</span>
+  <span class="toast-msg"></span>
+</div>
+
+<!-- ─── PAGE HERO ─── -->
+<div class="page-hero">
+  <div class="container">
+    <div class="section-label">Checkout</div>
+    <h1>Your Order</h1>
+    <p>Review your items and complete your delivery details below.</p>
+  </div>
+</div>
+
+<!-- ─── ORDER BODY ─── -->
+<div class="container">
+  <div class="order-body">
+
+    <!-- Cart Section (rendered by JS) -->
+    <div id="cart-section">
+      <!-- Populated by script.js -->
+    </div>
+
+    <!-- Checkout Form -->
+    <div class="checkout-section">
+      <h2>Delivery Details</h2>
+      <form id="checkout-form" class="checkout-form" novalidate>
+        <div class="form-group">
+          <label for="o-name">Full Name</label>
+          <input type="text" id="o-name" placeholder="Maria Santos" required>
+        </div>
+        <div class="form-group">
+          <label for="o-phone">Phone Number</label>
+          <input type="tel" id="o-phone" placeholder="+63 912 000 0000" required>
+        </div>
+        <div class="form-group">
+          <label for="o-email">Email Address</label>
+          <input type="email" id="o-email" placeholder="maria@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="o-address">Delivery Address</label>
+          <input type="text" id="o-address" placeholder="House No., Street, Barangay" required>
+        </div>
+        <div class="form-group">
+          <label for="o-city">City / Municipality</label>
+          <input type="text" id="o-city" placeholder="Manila" required>
+        </div>
+        <div class="form-group">
+          <label for="o-notes">Special Instructions</label>
+          <textarea id="o-notes" placeholder="Allergies, cooking preferences, gate codes..." style="min-height:80px;"></textarea>
+        </div>
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label for="o-payment">Payment Method</label>
+          <select id="o-payment" required>
+            <option value="">Select payment...</option>
+            <option>Cash on Delivery</option>
+            <option>GCash</option>
+            <option>Credit / Debit Card</option>
+            <option>PayMaya</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:1rem;">
+          Place Order →
+        </button>
+        <div id="order-success" class="form-success">
+          🎉 Order confirmed! Estimated delivery: 30–45 minutes.
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Sapori<span style="color:var(--clay)">.</span></a>
+        <p>A celebration of seasonal ingredients, culinary tradition, and the joy of sharing good food.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">📸</a>
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li><span>Mon – Thu: 11am – 10pm</span></li>
+          <li><span>Fri – Sat: 11am – 12am</span></li>
+          <li><span>Sunday: 10am – 9pm</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <ul>
+          <li><span>128 Artisan Lane, Manila</span></li>
+          <li><span>+63 912 345 6789</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Sapori Restaurant. All rights reserved.</span>
+      <span>Made with ♥ and good olive oil</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

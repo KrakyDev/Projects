@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — Sapori Restaurant</title>
+  <meta name="description" content="Explore Sapori's seasonal menu — Mains, Starters, Drinks, and Desserts, all freshly crafted.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">Sapori<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="order.html">Order</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" aria-label="Open cart">
+        🛒 <span class="cart-count">0</span>
+      </button>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── MOBILE MENU ─── -->
+<nav class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="order.html">Order Now</a>
+</nav>
+
+<!-- ─── CART DRAWER ─── -->
+<div class="cart-overlay"></div>
+<div class="cart-drawer">
+  <div class="drawer-header">
+    <h3>Your Cart</h3>
+    <button class="close-drawer">✕</button>
+  </div>
+  <div class="drawer-items"></div>
+  <div class="drawer-footer">
+    <div class="drawer-total"><span>Total</span><span>$0.00</span></div>
+    <a href="order.html" id="drawer-checkout-btn" class="btn btn-primary" style="width:100%;justify-content:center;">
+      Proceed to Checkout
+    </a>
+  </div>
+</div>
+
+<!-- ─── TOAST ─── -->
+<div class="toast">
+  <span class="toast-icon">✓</span>
+  <span class="toast-msg"></span>
+</div>
+
+<!-- ─── PAGE HERO ─── -->
+<div class="page-hero">
+  <div class="container">
+    <div class="section-label">Our Menu</div>
+    <h1>Seasonal &amp; Crafted</h1>
+    <p>Every dish made fresh, every day. Menus change with the seasons.</p>
+  </div>
+</div>
+
+<!-- ─── MENU TABS ─── -->
+<div class="menu-nav">
+  <div class="container menu-nav-inner">
+    <button class="menu-tab active" data-cat="meals">🍽 Mains</button>
+    <button class="menu-tab" data-cat="starters">🌿 Starters</button>
+    <button class="menu-tab" data-cat="drinks">🍹 Drinks</button>
+    <button class="menu-tab" data-cat="desserts">🍮 Desserts</button>
+  </div>
+</div>
+
+<!-- ─── MENU CONTENT ─── -->
+<div class="menu-content">
+  <div class="container">
+
+    <div class="menu-category active" id="menu-meals">
+      <div class="category-title">Main Courses</div>
+      <div class="menu-grid"><!-- Populated by script.js --></div>
+    </div>
+
+    <div class="menu-category" id="menu-starters">
+      <div class="category-title">Starters &amp; Sharing Plates</div>
+      <div class="menu-grid"><!-- Populated by script.js --></div>
+    </div>
+
+    <div class="menu-category" id="menu-drinks">
+      <div class="category-title">Beverages &amp; Cocktails</div>
+      <div class="menu-grid"><!-- Populated by script.js --></div>
+    </div>
+
+    <div class="menu-category" id="menu-desserts">
+      <div class="category-title">Desserts &amp; Sweet Endings</div>
+      <div class="menu-grid"><!-- Populated by script.js --></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Sapori<span style="color:var(--clay)">.</span></a>
+        <p>A celebration of seasonal ingredients, culinary tradition, and the joy of sharing good food.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">📸</a>
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li><span>Mon – Thu: 11am – 10pm</span></li>
+          <li><span>Fri – Sat: 11am – 12am</span></li>
+          <li><span>Sunday: 10am – 9pm</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <ul>
+          <li><span>128 Artisan Lane, Manila</span></li>
+          <li><span>+63 912 345 6789</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Sapori Restaurant. All rights reserved.</span>
+      <span>Made with ♥ and good olive oil</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

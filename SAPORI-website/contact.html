@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Sapori Restaurant</title>
+  <meta name="description" content="Get in touch with Sapori — reservations, events, and general inquiries.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">Sapori<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="order.html">Order</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" aria-label="Open cart">
+        🛒 <span class="cart-count">0</span>
+      </button>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── MOBILE MENU ─── -->
+<nav class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="order.html">Order Now</a>
+</nav>
+
+<!-- ─── CART DRAWER ─── -->
+<div class="cart-overlay"></div>
+<div class="cart-drawer">
+  <div class="drawer-header">
+    <h3>Your Cart</h3>
+    <button class="close-drawer">✕</button>
+  </div>
+  <div class="drawer-items"></div>
+  <div class="drawer-footer">
+    <div class="drawer-total"><span>Total</span><span>$0.00</span></div>
+    <a href="order.html" id="drawer-checkout-btn" class="btn btn-primary" style="width:100%;justify-content:center;">
+      Proceed to Checkout
+    </a>
+  </div>
+</div>
+
+<!-- ─── TOAST ─── -->
+<div class="toast">
+  <span class="toast-icon">✓</span>
+  <span class="toast-msg"></span>
+</div>
+
+<!-- ─── PAGE HERO ─── -->
+<div class="page-hero">
+  <div class="container">
+    <div class="section-label">Get in Touch</div>
+    <h1>We'd Love to Hear<br>from You</h1>
+    <p>Reservations, events, feedback — we're always listening.</p>
+  </div>
+</div>
+
+<!-- ─── CONTACT BODY ─── -->
+<div class="container">
+  <div class="contact-body">
+
+    <!-- Info Column -->
+    <div class="contact-info">
+      <h2 class="reveal">Visit &amp; Connect</h2>
+
+      <div class="info-item reveal">
+        <div class="info-icon">📍</div>
+        <div class="info-text">
+          <strong>Address</strong>
+          <span>128 Artisan Lane, Suite 4<br>Binondo, Manila, Philippines 1006</span>
+        </div>
+      </div>
+
+      <div class="info-item reveal reveal-delay-1">
+        <div class="info-icon">📞</div>
+        <div class="info-text">
+          <strong>Phone</strong>
+          <span>+63 912 345 6789<br>+63 2 8123 4567</span>
+        </div>
+      </div>
+
+      <div class="info-item reveal reveal-delay-2">
+        <div class="info-icon">✉️</div>
+        <div class="info-text">
+          <strong>Email</strong>
+          <span>hello@sapori.ph<br>events@sapori.ph</span>
+        </div>
+      </div>
+
+      <div class="info-item reveal reveal-delay-3">
+        <div class="info-icon">🕐</div>
+        <div class="info-text">
+          <strong>Opening Hours</strong>
+          <span>Mon–Thu: 11am–10pm<br>Fri–Sat: 11am–12am<br>Sunday: 10am–9pm</span>
+        </div>
+      </div>
+
+      <!-- MAP -->
+      <div class="map-embed reveal" style="margin-top:2rem;">
+        <div class="map-placeholder">
+          <div class="map-icon">🗺</div>
+          <strong>128 Artisan Lane, Binondo, Manila</strong>
+          <span style="font-size:0.78rem;">Click to open directions</span>
+          <a href="https://maps.google.com/?q=Binondo+Manila+Philippines"
+             target="_blank" rel="noopener"
+             class="btn btn-outline"
+             style="margin-top:1rem;font-size:0.7rem;padding:0.6rem 1.2rem;">
+            Open in Google Maps →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Column -->
+    <div class="contact-form-wrap">
+      <h2 class="reveal">Send a Message</h2>
+      <form id="contact-form" class="checkout-form" novalidate>
+        <div class="form-grid">
+          <div class="form-group reveal">
+            <label for="c-name">Your Name</label>
+            <input type="text" id="c-name" placeholder="Maria Santos" required>
+          </div>
+          <div class="form-group reveal reveal-delay-1">
+            <label for="c-email">Email Address</label>
+            <input type="email" id="c-email" placeholder="maria@email.com" required>
+          </div>
+          <div class="form-group reveal reveal-delay-2">
+            <label for="c-phone">Phone Number</label>
+            <input type="tel" id="c-phone" placeholder="+63 912 000 0000">
+          </div>
+          <div class="form-group reveal reveal-delay-3">
+            <label for="c-subject">Subject</label>
+            <select id="c-subject">
+              <option value="">Select a topic...</option>
+              <option>Table Reservation</option>
+              <option>Private Event</option>
+              <option>Catering Inquiry</option>
+              <option>Feedback</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group full reveal">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" placeholder="Tell us how we can help..." required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:0.5rem;">Send Message →</button>
+        <div id="contact-success" class="form-success">
+          ✓ Thank you! We'll get back to you within 24 hours.
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Sapori<span style="color:var(--clay)">.</span></a>
+        <p>A celebration of seasonal ingredients, culinary tradition, and the joy of sharing good food.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">📸</a>
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li><span>Mon – Thu: 11am – 10pm</span></li>
+          <li><span>Fri – Sat: 11am – 12am</span></li>
+          <li><span>Sunday: 10am – 9pm</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <ul>
+          <li><span>128 Artisan Lane, Manila</span></li>
+          <li><span>+63 912 345 6789</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Sapori Restaurant. All rights reserved.</span>
+      <span>Made with ♥ and good olive oil</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
